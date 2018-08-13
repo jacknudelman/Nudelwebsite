@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { FetchFilesService } from '../services/fetch-files.service';
 
 @Component({
   selector: 'nudel-image-grid-layout',
@@ -7,15 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ImageGridLayoutComponent implements OnInit {
 
-  images: string[] = ["assets/images/jack1.png",
-                      "assets/images/jack2.png",
-                      "assets/images/jack3.png",
-                      'assets/images/jack4.png',
-                      'assets/images/jack5.png'];
+  @Input() images: Array<string>;
 
-  constructor() { }
+  constructor(private fetchFilesService: FetchFilesService) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
 }

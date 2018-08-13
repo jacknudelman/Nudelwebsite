@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { ImageGridLayoutComponent } from './image-grid-layout/image-grid-layout.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PhotographyComponent } from './photography/photography.component';
+import { FetchFilesService } from './services/fetch-files.service';
 
 const appRoutes: Routes = [
   {path: 'photography', component: PhotographyComponent},
@@ -30,7 +31,7 @@ const appRoutes: Routes = [
     BrowserModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [FetchFilesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

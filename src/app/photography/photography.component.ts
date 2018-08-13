@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FetchFilesService } from '../services/fetch-files.service';
 
 @Component({
   selector: 'nudel-photography',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PhotographyComponent implements OnInit {
 
-  constructor() { }
+  images: Array<string> = this.getPhotographyImages();
+
+  constructor(private fetchFilesService: FetchFilesService) { }
 
   ngOnInit() {
   }
 
+  getPhotographyImages(): Array<string> {
+    return this.fetchFilesService.getFiles('photography');
+  }
 }
