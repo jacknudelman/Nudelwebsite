@@ -16,6 +16,11 @@ export class PhotographyComponent implements OnInit {
   }
 
   getPhotographyImages(): Array<string> {
-    return this.fetchFilesService.getFiles('photography');
+    const x: Array<string> = this.fetchFilesService.getFiles('photography');
+    console.log(x);
+    // x.shift();
+    delete x[0];
+    console.log(x);
+    return x;
   }
 }

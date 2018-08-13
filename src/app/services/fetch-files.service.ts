@@ -34,8 +34,8 @@ export class FetchFilesService {
 
   private getS3Bucket(): any {
     return new S3({
-      accessKeyId: 'AKIAITQK6CJ5GE62ULKA',
-      secretAccessKey: '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',
+      accessKeyId: 'AKIAJ4XPF2Z3N6CDU7YQ',
+      secretAccessKey: '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',
       region: 'us-east-1'
     });
   }
