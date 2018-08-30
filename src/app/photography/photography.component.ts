@@ -8,19 +8,25 @@ import { FetchFilesService } from '../services/fetch-files.service';
 })
 export class PhotographyComponent implements OnInit {
 
-  images: Array<string> = this.getPhotographyImages();
+  // photography_images: Array<string> = this.getPhotographyImages2();
 
-  constructor(private fetchFilesService: FetchFilesService) { }
+  constructor() { }
 
   ngOnInit() {
   }
 
-  getPhotographyImages(): Array<string> {
-    const x: Array<string> = this.fetchFilesService.getFiles('photography');
-    console.log(x);
-    // x.shift();
-    delete x[0];
-    console.log(x);
-    return x;
-  }
+  // getPhotographyImages(): Array<string> {
+  //   const x: Array<string> = this.fetchFilesService.getFiles('photography');
+  //   console.log(x);
+  //   // x.shift();
+  //   delete x[0];
+  //   console.log(x);
+  //   return x;
+  // }
+
+  // getPhotographyImages2(): Array<string>{
+  //   File file = new File("../assets/images/photography.txt");
+  //   var reader = new FileReader();
+  //   fileReader.readAsText(file)
+  // }
 }
